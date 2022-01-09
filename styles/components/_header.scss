@@ -1,0 +1,20 @@
+.header{
+    &__wrapper{
+        @include content-wrapper;
+        @include flex-parent(column, nowrap, center, center);
+        height:100vh;
+        padding: 1.5rem;
+    }
+    &__title{
+        @extend .clash-bold;
+        text-transform: uppercase;
+        @include text-style(3.25rem, 3rem, $text-white);
+        margin: 2rem 0;
+    }
+    &__subtitle{
+        @extend .clash-regular;
+        text-transform: uppercase;
+        @include text-style(2rem, 3rem, $text-white);
+        margin: 2rem 0; 
+    }
+}

@@ -1,0 +1,24 @@
+@mixin text-style($size: 1rem, $height: 2rem, $color: $text-white) {
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+@mixin content-wrapper {
+    width: auto;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    float: none;
+}
+
+
+@mixin flex-parent( $direction: column, $wrap: wrap, $justify: space-between, $align: center) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
