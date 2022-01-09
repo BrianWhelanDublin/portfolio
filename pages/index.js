@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import client from "../lib/apolloClient";
 import { HOMEPAGE_QUERY } from '../lib/queries/homepage';
+import Header from '../components/Header/Header';
 
 export default function Home({header}) {
 
@@ -15,6 +16,7 @@ export default function Home({header}) {
       </Head>
 
       <main className={styles.main}>
+        <Header content={header} />
      
       </main>
 
