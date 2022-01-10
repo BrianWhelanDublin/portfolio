@@ -1,3 +1,6 @@
+// Breakpoint SASS
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
 @import "helpers/mixins";
 
 @import "base/fonts";
@@ -6,5 +9,3 @@
 @import "base/base";
 
 @import "components/header";
-
-

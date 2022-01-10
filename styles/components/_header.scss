@@ -1,20 +1,89 @@
-.header{
-    &__wrapper{
-        @include content-wrapper;
-        @include flex-parent(column, nowrap, center, center);
-        height:100vh;
-        padding: 1.5rem;
-    }
-    &__title{
-        @extend .clash-bold;
-        text-transform: uppercase;
-        @include text-style(3.25rem, 3rem, $text-white);
-        margin: 2rem 0;
-    }
-    &__subtitle{
-        @extend .clash-regular;
-        text-transform: uppercase;
-        @include text-style(2rem, 3rem, $text-white);
-        margin: 2rem 0; 
-    }
+.header {
+	&__wrapper {
+		@include content-wrapper;
+		display: grid;
+		height: 100vh;
+		min-height: 50rem;
+		padding: 1.5rem;
+		@include breakpoint($break-768-up) {
+			padding: 2.5rem;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(6, 1fr);
+		}
+	}
+	&__title {
+		&-wrapper {
+			width: 95%;
+			margin-right: auto;
+			@include breakpoint($break-768-up) {
+				grid-row-start: 1;
+				grid-row-end: 4;
+				grid-column-start: 1;
+				grid-column-end: 5;
+			}
+			@include breakpoint($break-1025-up) {
+				grid-column-end: 6;
+			}
+		}
+		@extend .clash-regular;
+		text-transform: uppercase;
+		@include text-style(5rem, 4rem, $text-white);
+		margin: 3.5rem 0 2rem 0;
+		@include breakpoint($break-768-up) {
+			@include text-style(8rem, 6rem, $text-white);
+		}
+		@include breakpoint($break-1025-up) {
+			@include text-style(11.5rem, 8rem, $text-white);
+		}
+		&-animation {
+			display: inline-block;
+			overflow: hidden;
+			margin: 0 0.2rem;
+			span {
+				display: inline-block;
+				white-space: pre;
+			}
+		}
+	}
+	&__description {
+		&-wrapper {
+			overflow: hidden;
+			width: 75%;
+			margin-left: 5%;
+			@include breakpoint($break-768-up) {
+				grid-row-start: 4;
+				grid-row-end: 6;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+		}
+		@include text-style(1.2rem, 2rem, $text-white);
+		@extend .clash-extra-light;
+		@include breakpoint($break-768-up) {
+			@include text-style(1.5rem, 2rem, $text-white);
+		}
+		@include breakpoint($break-1025-up) {
+			@include text-style(2rem, 3rem, $text-white);
+		}
+	}
+	&__subtitle {
+		&-wrapper {
+			width: 85%;
+			margin-left: auto;
+
+			@include breakpoint($break-768-up) {
+				grid-row-start: 5;
+				grid-row-end: 7;
+				grid-column-start: 3;
+				grid-column-end: 7;
+			}
+		}
+		@extend .clash-regular;
+		text-transform: uppercase;
+		@include text-style(3rem, 3rem, $text-white);
+		margin: 3rem 0;
+		@include breakpoint($break-768-up) {
+			@include text-style(5rem, 4rem, $text-white);
+		}
+	}
 }

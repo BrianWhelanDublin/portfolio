@@ -5,8 +5,12 @@ $darkest-grey: #0b1014;
 $dark-grey: #252e36;
 $grey: #3d454d;
 $light-grey: #52595f;
-$lightest-grey:#6b7379;
+$lightest-grey: #6b7379;
 
-$text-white:$white;
-$text-light:#dbdee1;
-$text-dark:#9ca3ab;
+$text-white: $white;
+$text-light: #dbdee1;
+$text-dark: #9ca3ab;
+
+$break-768-up: min-width 768px;
+$break-1000-up: min-width 1000px;
+$break-1025-up: min-width 1025px;
