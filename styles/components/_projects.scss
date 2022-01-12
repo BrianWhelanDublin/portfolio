@@ -1,0 +1,42 @@
+.projects {
+	&__wrapper {
+		padding: 2rem;
+	}
+	&__project {
+		border-bottom: 0.1rem solid $white;
+		height: 14rem;
+		@include flex-parent(row, nowrap, space-between, center);
+		@extend .clash-light;
+		h3 {
+			@extend .clash-regular;
+			text-transform: uppercase;
+			@include text-style(1.5rem, 3rem, $text-white);
+			@include breakpoint($break-768-up) {
+				@include text-style(2.5rem, 4rem, $text-white);
+			}
+		}
+		p {
+			@include text-style(1.2rem, 2rem, $text-white);
+		}
+		&:first-child {
+			border-top: 0.1rem solid $white;
+		}
+		&:hover {
+			&-image-wrapper {
+				display: block;
+			}
+		}
+		&-image {
+			&-wrapper {
+				position: relative;
+				display: none;
+				@include breakpoint($break-768-up) {
+					display: block;
+					height: 12rem;
+					width: 25rem;
+					margin: 2rem;
+				}
+			}
+		}
+	}
+}

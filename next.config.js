@@ -1,3 +1,9 @@
 module.exports = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+	env: {
+		BASE_URL: process.env.BASE_URL,
+	},
+	images: {
+		domains: ["a.storyblok.com"],
+	},
+};

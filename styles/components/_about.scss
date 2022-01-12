@@ -1,0 +1,24 @@
+.about {
+	&__wrapper {
+		height: 80vh;
+		min-height: 30rem;
+		margin: 4rem 0;
+	}
+	&__content {
+		padding: 2rem 2rem 2rem 1rem;
+		@include breakpoint($break-768-up) {
+			width: 55%;
+			margin-right: auto;
+			padding: 3rem;
+		}
+		p {
+			@extend .clash-light;
+			@include text-style(1.5rem, 2rem, $text-white);
+			margin: 1rem 0;
+			@include breakpoint($break-768-up) {
+				@include text-style(2.25rem, 3rem, $text-white);
+				margin: 2rem;
+			}
+		}
+	}
+}
