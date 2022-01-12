@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
+import { letterVarients } from "./text-animation-variants";
 
-const TextAnimation = ({ text, variant }) => {
+const TextAnimation = ({ text }) => {
 	return (
 		<>
 			{[...text].map((letter, index) => (
-				<span key={index} className="header__title-animation">
-					<motion.span variants={variant}>{letter}</motion.span>
+				<span key={index} className="text-animation">
+					<motion.span
+						initial="start"
+						whileInView="end"
+						viewport={{ once: true }}
+						variants={letterVarients}
+					>
+						{letter}
+					</motion.span>
 				</span>
 			))}
 		</>

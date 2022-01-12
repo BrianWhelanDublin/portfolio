@@ -35,15 +35,6 @@
 		@include breakpoint($break-1025-up) {
 			@include text-style(11.5rem, 8rem, $text-white);
 		}
-		&-animation {
-			display: inline-block;
-			overflow: hidden;
-			margin: 0 0.2rem;
-			span {
-				display: inline-block;
-				white-space: pre;
-			}
-		}
 	}
 	&__description {
 		&-wrapper {

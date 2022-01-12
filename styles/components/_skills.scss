@@ -1,0 +1,40 @@
+.skills {
+	&__wrapper {
+		@include flex-parent(column, nowrap, space-between, flex-start);
+		padding: 2rem;
+		margin: 2rem 0;
+		@include breakpoint($break-768-up) {
+			@include flex-parent(row, nowrap, space-between, flex-start);
+			padding: 5rem 2rem;
+			margin: 4rem 0;
+		}
+	}
+	&__title {
+		@include breakpoint($break-768-up) {
+			flex-basis: 50%;
+		}
+		h3 {
+			@include text-style(2.5rem, 4rem, $text-white);
+			@extend .clash-regular;
+
+			text-transform: uppercase;
+			@include breakpoint($break-768-up) {
+				@include text-style(4.5rem, 5rem, $text-white);
+			}
+		}
+	}
+	&__list {
+		margin: 4rem 0;
+		@include breakpoint($break-768-up) {
+			flex-basis: 50%;
+			margin: 0;
+		}
+		p {
+			@include text-style(1.75rem, 2rem, $text-white);
+			@extend .clash-light;
+			@include breakpoint($break-768-up) {
+				@include text-style(2.5rem, 3rem, $text-white);
+			}
+		}
+	}
+}
