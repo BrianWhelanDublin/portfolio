@@ -14,12 +14,12 @@
 			flex-basis: 50%;
 		}
 		h3 {
-			@include text-style(2.5rem, 4rem, $text-white);
+			@include text-style(3.5rem, 4rem, $text-white);
 			@extend .clash-regular;
 
 			text-transform: uppercase;
 			@include breakpoint($break-768-up) {
-				@include text-style(4.5rem, 5rem, $text-white);
+				@include text-style(5rem, 5rem, $text-white);
 			}
 		}
 	}

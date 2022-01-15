@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
 	return (
 		<div
 			className="projects__project"
-			onMouseOver={handleMouseEnter}
+			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
 			<div>

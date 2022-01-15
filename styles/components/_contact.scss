@@ -1,0 +1,53 @@
+.contact {
+	&__wrapper {
+		padding: 2rem;
+		@include breakpoint($break-768-up) {
+			display: grid;
+			grid-template-columns: repeat(2, 50%);
+		}
+	}
+	&__title {
+		h3 {
+			@include text-style(3.5rem, 4rem, $text-white);
+			@extend .clash-regular;
+
+			text-transform: uppercase;
+			@include breakpoint($break-768-up) {
+				@include text-style(5rem, 5rem, $text-white);
+			}
+		}
+	}
+	&__link {
+		@extend .clash-regular;
+		@include text-style(3rem, 4rem, $text-white);
+		text-transform: uppercase;
+		cursor: pointer;
+		margin: 4rem 0;
+		width: 100%;
+		@include breakpoint($break-768-up) {
+			margin: 0 0 4rem 0;
+			@include text-style(4rem, 4.5rem, $text-white);
+		}
+		a {
+			@include flex-parent(row, nowrap, space-between, center);
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				height: 0.1rem;
+				width: 100%;
+				transform: scaleX(0);
+				background-color: $white;
+				bottom: -1rem;
+				transform-origin: center;
+				transition: transform 0.2s ease-out;
+			}
+			&:hover {
+				&:after {
+					transform: scaleX(1);
+					transform-origin: center;
+				}
+			}
+		}
+	}
+}

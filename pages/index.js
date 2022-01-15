@@ -6,15 +6,17 @@ import Layout from "../components/Layout/layout";
 import About from "../components/AboutSection/About";
 import ProjectSection from "../components/ProjectsSection/ProjectSection";
 import Skills from "../components/SkillsSection/Skills";
+import Contact from "../components/ContactSection/Contact";
 
-export default function Home({ header, about, skills, projects }) {
-	console.log(skills);
+export default function Home({ header, about, skills, projects, contact }) {
+	console.log(contact);
 	return (
 		<Layout>
 			<HomeHeader content={header} />
 			<About content={about} />
 			<ProjectSection projects={projects} />
 			<Skills skills={skills} />
+			<Contact content={contact} />
 		</Layout>
 	);
 }
@@ -35,6 +37,7 @@ export const getStaticProps = async () => {
 			about: homepageData.PageItem.content.body[1],
 			skills: homepageData.PageItem.content.body[2],
 			projects: projectsData.ProjectItems.items,
+			contact: homepageData.PageItem.content.body[3],
 		},
 	};
 };
