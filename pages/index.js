@@ -9,7 +9,7 @@ import Skills from "../components/SkillsSection/Skills";
 import Contact from "../components/ContactSection/Contact";
 
 export default function Home({ header, about, skills, projects, contact }) {
-	console.log(contact);
+	console.log(projects);
 	return (
 		<Layout>
 			<HomeHeader content={header} />
