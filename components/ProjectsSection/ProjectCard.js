@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-	projectImageVariants,
-	projectCardVariants,
-} from "./projectcard-variants";
+import { projectImageVariants } from "./projectcard-variants";
 
 const ProjectCard = ({ project }) => {
 	const { content } = project;
@@ -14,11 +11,7 @@ const ProjectCard = ({ project }) => {
 	const handleMouseLeave = () => setShowImage(false);
 
 	return (
-		<motion.div
-			variants={projectCardVariants}
-			initial="start"
-			whileInView="end"
-			viewport={{ once: true }}
+		<div
 			className="projects__project"
 			onMouseOver={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
@@ -39,13 +32,13 @@ const ProjectCard = ({ project }) => {
 						alt=""
 						layout="fill"
 						objectFit="cover"
-						priority={true}
+						loading="eager"
 						quality="100"
 						className="projects__project-image"
 					/>
 				</motion.div>
 			)}
-		</motion.div>
+		</div>
 	);
 };
 
