@@ -7,6 +7,7 @@
 		height: 14rem;
 		@include flex-parent(row, nowrap, space-between, center);
 		@extend .clash-light;
+		cursor: pointer;
 		h3 {
 			@extend .clash-regular;
 			text-transform: uppercase;

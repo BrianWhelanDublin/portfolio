@@ -1,15 +1,18 @@
 import client from "../lib/apolloClient";
 import { useRouter } from "next/router";
 import { PROJECT_SLUGS, PROJECT_BY_ID } from "../lib/queries/projects";
+import ProjectHeader from "../components/ProjectHeader/ProjectHeader";
 
 const PrjectPage = ({ data }) => {
-	console.log(data);
+	const content = data.ProjectItem.content;
+	console.log(content);
 	const router = useRouter();
 
 	if (router.isFallback) {
 		return <div>Loading...</div>;
 	}
-	return <h1>Project</h1>;
+
+	return <ProjectHeader title={content.title} image={content.mainImageName} />;
 };
 
 export default PrjectPage;

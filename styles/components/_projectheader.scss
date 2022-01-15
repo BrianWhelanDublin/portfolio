@@ -1,0 +1,49 @@
+.projectpage {
+	&__header {
+		h1 {
+			@extend .clash-regular;
+			padding: 6rem 2rem;
+			text-align: center;
+			@include text-style(3rem, 4rem, $text-white);
+			@include breakpoint($break-768-up) {
+				@include text-style(6rem, 5rem, $text-white);
+			}
+		}
+		&-link {
+			@include text-style(1rem, 4rem, $text-white);
+			@extend .clash-regular;
+			text-align: right;
+			padding: 0 2rem;
+			a {
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					height: 0.1rem;
+					width: 100%;
+					transform: scaleX(0);
+					background-color: $white;
+					bottom: -0.2rem;
+					right: 0;
+					transform-origin: center;
+					transition: transform 0.2s ease-out;
+				}
+				&:hover {
+					&:after {
+						transform: scaleX(1);
+						transform-origin: center;
+					}
+				}
+			}
+		}
+	}
+	&__image {
+		position: relative;
+		height: 15rem;
+		width: 100%;
+		padding: 0 2rem;
+		@include breakpoint($break-768-up) {
+			height: 45rem;
+		}
+	}
+}
