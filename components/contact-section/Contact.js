@@ -6,6 +6,7 @@ import { linkVariants } from "./contact-variants";
 export const ContactLink = ({ url, title }) => {
 	return (
 		<motion.div
+			id="contact"
 			initial="start"
 			whileInView="end"
 			viewport={{ once: true }}

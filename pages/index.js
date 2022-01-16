@@ -1,23 +1,23 @@
 import client from "../lib/apolloClient";
 import { HOMEPAGE_QUERY } from "../lib/queries/homepage";
 import { PROJECTS_QUERY } from "../lib/queries/projects";
-import HomeHeader from "../components/HomeHeader/HomeHeader";
-import Layout from "../components/Layout/layout";
-import About from "../components/AboutSection/About";
-import ProjectSection from "../components/ProjectsSection/ProjectSection";
-import Skills from "../components/SkillsSection/Skills";
-import Contact from "../components/ContactSection/Contact";
+import HomeHeader from "../components/home-header/HomeHeader";
+
+import About from "../components/about-section/About";
+import ProjectSection from "../components/projects-section/ProjectSection";
+import Skills from "../components/skills-section/Skills";
+import Contact from "../components/contact-section/Contact";
 
 export default function Home({ header, about, skills, projects, contact }) {
 	console.log(projects);
 	return (
-		<Layout>
+		<>
 			<HomeHeader content={header} />
 			<About content={about} />
 			<ProjectSection projects={projects} />
 			<Skills skills={skills} />
 			<Contact content={contact} />
-		</Layout>
+		</>
 	);
 }
 

@@ -1,7 +1,7 @@
 import client from "../lib/apolloClient";
 import { useRouter } from "next/router";
 import { PROJECT_SLUGS, PROJECT_BY_ID } from "../lib/queries/projects";
-import ProjectHeader from "../components/ProjectHeader/ProjectHeader";
+import ProjectHeader from "../components/project-header/ProjectHeader";
 
 const PrjectPage = ({ data }) => {
 	const content = data.ProjectItem.content;

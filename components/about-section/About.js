@@ -4,7 +4,7 @@ import { aboutSectionVariants, aboutTextVariants } from "./about-vairants";
 
 const About = ({ content }) => {
 	return (
-		<section className="about__wrapper">
+		<section id="about" className="about__wrapper">
 			<motion.div
 				initial="start"
 				whileInView="end"

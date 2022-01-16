@@ -5,16 +5,15 @@ const TextAnimation = ({ text }) => {
 	return (
 		<>
 			{[...text].map((letter, index) => (
-				<span key={index} className="text-animation">
-					<motion.span
-						initial="start"
-						whileInView="end"
-						viewport={{ once: true }}
-						variants={letterVarients}
-					>
-						{letter}
-					</motion.span>
-				</span>
+				<motion.span
+					initial="start"
+					whileInView="end"
+					viewport={{ once: true }}
+					key={index}
+					className="text-animation"
+				>
+					<motion.span variants={letterVarients}>{letter}</motion.span>
+				</motion.span>
 			))}
 		</>
 	);

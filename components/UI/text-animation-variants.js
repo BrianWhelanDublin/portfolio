@@ -1,6 +1,6 @@
 export const letterVarients = {
 	start: {
-		x: "100%",
+		x: "-100%",
 	},
 	end: {
 		x: 0,

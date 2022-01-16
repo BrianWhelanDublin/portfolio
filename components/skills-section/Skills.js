@@ -5,7 +5,7 @@ import { skillsVariants } from "./skills-variants";
 
 const Skills = ({ skills }) => {
 	return (
-		<section className="skills__wrapper">
+		<section id="skills" className="skills__wrapper">
 			<div className="skills__title">
 				<h3>
 					<TextAnimation text={"SKILLS"} />

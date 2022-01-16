@@ -1,0 +1,69 @@
+.nav {
+	&__wrapper {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		padding: 1rem;
+		z-index: 12;
+		button {
+			width: 2rem;
+			height: 0.75rem;
+			background: transparent;
+			border: none;
+			outline: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+			z-index: 11;
+			float: right;
+			span {
+				width: 1.7rem;
+				height: 2px;
+				background: $white;
+				transition: all 0.2s ease-out;
+				transform-origin: left;
+			}
+			&.active {
+				span:first-child {
+					transform: rotate(40deg) translateY(-5px);
+				}
+				span:last-child {
+					transform: rotate(-40deg) translateY(5px);
+				}
+			}
+		}
+	}
+	&__items {
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		background: $dark-grey;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding-top: 100px;
+		a {
+			@extend .clash-light;
+			cursor: pointer;
+			@include text-style(2rem, 3rem, $text-white);
+			margin: 1rem 0;
+			text-transform: uppercase;
+			@include breakpoint($break-768-up) {
+				text-transform: uppercase;
+				@include text-style(3rem, 3.5rem, $text-white);
+			}
+		}
+		@include breakpoint($break-768-up) {
+			width: 100%;
+			padding: 1rem 2rem;
+		}
+	}
+}
