@@ -1,3 +1,10 @@
+# Brian Whelan Portfolio
+
+This is my portfolio project I am currently building and hope to launch soon.
+I am building this with Nex.js and react using Scss for styling. Content is being managed by Storyblok CMS and the data is being fetched using GraphQl. I am also using React Framer Motion for animations.
+
+## Next.js
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
