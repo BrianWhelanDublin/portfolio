@@ -8,11 +8,6 @@ import { projectHeaderVariants } from "./project-header-variants";
 const ProjectHeader = ({ title, image }) => {
 	return (
 		<section className="projectpage__header">
-			<div className="projectpage__header-link">
-				<Link href="/">
-					<a>Home</a>
-				</Link>
-			</div>
 			<h1>
 				<TextAnimation text={title} />
 			</h1>

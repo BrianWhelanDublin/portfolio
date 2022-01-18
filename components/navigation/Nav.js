@@ -27,7 +27,15 @@ const NavItems = ({ onClick }) => {
 const Nav = () => {
 	const [toggleNav, setToggleNav] = useState(false);
 
-	const handleToggleNav = () => setToggleNav(!toggleNav);
+	const handleToggleNav = () => {
+		if (toggleNav) {
+			setTimeout(() => {
+				setToggleNav(!toggleNav);
+			}, 500);
+		} else {
+			setToggleNav(!toggleNav);
+		}
+	};
 
 	return (
 		<nav className="nav__wrapper">

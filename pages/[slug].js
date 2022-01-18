@@ -2,6 +2,7 @@ import client from "../lib/apolloClient";
 import { useRouter } from "next/router";
 import { PROJECT_SLUGS, PROJECT_BY_ID } from "../lib/queries/projects";
 import ProjectHeader from "../components/project-header/ProjectHeader";
+import ProjectAbout from "../components/project-about/ProjectAbout";
 
 const PrjectPage = ({ data }) => {
 	const content = data.ProjectItem.content;
@@ -12,7 +13,16 @@ const PrjectPage = ({ data }) => {
 		return <div>Loading...</div>;
 	}
 
-	return <ProjectHeader title={content.title} image={content.mainImageName} />;
+	return (
+		<>
+			<ProjectHeader title={content.title} image={content.mainImageName} />
+			<ProjectAbout
+				about={content.about}
+				github={content.githubCode}
+				liveSite={content.liveSite}
+			/>
+		</>
+	);
 };
 
 export default PrjectPage;

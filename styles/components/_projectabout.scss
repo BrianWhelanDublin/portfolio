@@ -1,0 +1,43 @@
+.project-about {
+	&__wrapper {
+		padding: 4rem 2rem;
+		@include breakpoint($break-768-up) {
+			@include flex-parent(row, nowrap, space-between, flex-start);
+		}
+	}
+	&__links {
+		@include flex-parent(column, nowrap, space-between, flex-start);
+		@include breakpoint($break-768-up) {
+			flex-basis: 40%;
+			margin: 2rem 0;
+		}
+		a {
+			margin: 1rem 0;
+			@extend .clash-regular;
+			@include text-style(1.75rem, 2rem, $text-white);
+			@include flex-parent(row, nowrap, space-between, center);
+			width: 60%;
+			@include breakpoint($break-768-up) {
+				@include text-style(2.75rem, 2rem, $text-white);
+			}
+			span {
+				display: block;
+				margin-top: 0.2rem;
+			}
+		}
+	}
+	&__text {
+		margin: 2rem 0;
+		@extend .clash-light;
+		@include text-style(1.5rem, 2rem, $text-white);
+		@include breakpoint($break-768-up) {
+			flex-basis: 60%;
+		}
+		p {
+			margin: 1rem 0;
+			@include breakpoint($break-768-up) {
+				@include text-style(1.75rem, 2.5rem, $text-white);
+			}
+		}
+	}
+}

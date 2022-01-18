@@ -1,6 +1,6 @@
 import { render } from "storyblok-rich-text-react-renderer";
 import { motion } from "framer-motion";
-import { aboutSectionVariants, aboutTextVariants } from "./about-vairants";
+import { aboutTextVariants } from "./about-vairants";
 
 const About = ({ content }) => {
 	return (
